@@ -10,99 +10,43 @@
  <title>Document</title>
 </head>
 
-<body>
- <div id="banner">
-  <h1>TIC TAC TOE</h1>
- </div>
- <div id="options">
-  <p>Choose your options</p>
-  <button id="x">X</button>
-  <button id="O">O</button>
- </div>
- <div id="choice">
-  <p id="choiceMsg"></p>
- </div>
- <table id="game">
-  <tr>
-   <td id="one" data-value="1">
-    <div class="up-dots">
-     <i class="fa fa-dot-circle-o pull-right"></i>
+ <body>
+  <h1> Tic Tac Toe </h1>
+  <div id="container">
+   <div class="block">
+    <div id="box1" class="box top left">
+     <span data-player="none" onclick="play(this)">&nbsp;</span>
     </div>
-    <div class="center-space">
+    <div id="box2" class="box top">
+     <span data-player="none" onclick="play(this)">&nbsp;</span>
     </div>
-    <div class="down-dots">
-     <i class="fa fa-dot-circle-o pull-left"></i>
-     <i class="fa fa-dot-circle-o pull-right"></i>
+    <div id="box3" class="box top right">
+     <span data-player="none" onclick="play(this)">&nbsp;</span>
     </div>
-   </td>
-   <td id="two" data-value="2">
-    <div class="placeholder">
+   </div>
+   <div class="block">
+    <div id="box4" class="box left">
+     <span data-player="none" onclick="play(this)">&nbsp;</span>
     </div>
-    <div class="center-space">
+    <div id="box5" class="box">
+     <span data-player="none" onclick="play(this)">&nbsp;</span>
     </div>
-    <div class="placeholder">
+    <div id="box6" class="box right">
+     <span data-player="none" onclick="play(this)">&nbsp;</span>
     </div>
-   </td>
-   <td id="three" data-value="3">
-    <div class="up-dots">
-     <i class="fa fa-dot-circle-o pull-left"></i>
+   </div>
+   <div class="block">
+    <div id="box7" class="box left bottom">
+     <span data-player="none" onclick="play(this)">&nbsp;</span>
     </div>
-    <div class="center-space">
+    <div id="box8" class="box bottom">
+     <span data-player="none" onclick="play(this)">&nbsp;</span>
     </div>
-    <div class="down-dots">
-     <i class="fa fa-dot-circle-o pull-left"></i>
-     <i class="fa fa-dot-circle-o pull-right"></i>
+    <div id="box9" class="box right bottom">
+     <span data-player="none" onclick="play(this)">&nbsp;</span>
     </div>
-   </td>
-  </tr>
-  <tr>
-   <td id="four" data-value="4">
-    <div class="placeholder">
-    </div>
-    <div class="center-space">
-    </div>
-    <div class="placeholder">
-    </div>
-   </td>
-   <td id="five" data-value="5">
-    <div class="placeholder">
-    </div>
-    <div class="center-space">
-    </div>
-    <div class="placeholder">
-    </div>
-   </td>
-   <td id="six" data-value="6">
-    <div class="placeholder">
-    </div>
-    <div class="center-space">
-    </div>
-    <div class="placeholder">
-    </div>
-   </td>
-  </tr>
-  <tr>
-   <td id="seven" data-value="7">
-    <div class="down-dots">
-     <i class="fa fa-dot-circle-o pull-left"></i>
-     <i class="fa fa-dot-circle-o pull-right"></i>
-    </div>
-    <div class="center-space">
-    </div>
-    <div class="up-dots">
-     <i class="fa fa-dot-circle-o pull-left"></i>
-    </div>
-   </td>
-   <td id="eight" data-value="8">
-    <div class="placeholder">
-    </div>
-    <div class="center-space">
-    </div>
-    <div class="placeholder">
-    </div>
-   </td>
-  </tr>
- </table>
-</body>
+   </div>
+  </div>
+ </body>
 
 </html>
