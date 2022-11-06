@@ -1,4 +1,5 @@
- var playerTurn, moves, isGameOver, span, restartButton;  
+// will constantly check if there is a winner
+var playerTurn, moves, isGameOver, span, restartButton;  
  playerTurn = "x";  
  moves = 0;  
  isGameOver = false;  
@@ -40,14 +41,16 @@
            gameOver(a);  
       }  
  }  
+ // sets up a check if there is a win and says who won and asks if you want to play again
  function playAgain(){  
       document.getElementsByClassName("alert")[0].parentNode.removeChild(document.getElementsByClassName("alert")[0]);  
       resetGame();  
       window.isGameOver = false;  
       for(var k =0; k<span.length; k++){  
-           span[k].parentNode.className= span[k].parentNode.className.replace("activeBox", "");//remove activebox class; you can use classlist.remove , but it doesn't support all browsers  
+           span[k].parentNode.className= span[k].parentNode.className.replace("activeBox", "");
       }  
  }  
+ // when you hit play again you restart the board
  function resetGame(){  
       for (i=0; i<span.length; i++){  
            span[i].dataset.player = "none";  
@@ -55,6 +58,7 @@
       }  
       playerTurn = "x";  
  }  
+ // says who won and places a restart button
  function gameOver(a){  
       var gameOverAlertElement = "<b>GAME OVER</b><br><br> Player " + span[a].dataset.player.toUpperCase() + ' Win !!! <br><br>' + restartButton  
       var div = document.createElement("div");  
@@ -64,6 +68,7 @@
       window.isGameOver = true;  
       moves = 0;  
  }  
+ // checks if it is a draw and outputs a draw and a restart button
  function draw(){  
       var drawAlertElement = '<b>DRAW!!!</b><br><br>' + restartButton;  
       var div = document.createElement("div");  
