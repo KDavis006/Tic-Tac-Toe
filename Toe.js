@@ -58,23 +58,36 @@ var playerTurn, moves, isGameOver, span, restartButton;
       }  
       playerTurn = "x";  
  }  
+ let winX = 0;
+ let winO = 0;
  // says who won and places a restart button
  function gameOver(a){  
-      var gameOverAlertElement = "<b>GAME OVER</b><br><br> Player " + span[a].dataset.player.toUpperCase() + ' Win !!! <br><br>' + restartButton  
+      var winner = span[a].dataset.player;
+      var gameOverAlertElement = "<b>GAME OVER</b><br><br> Player " + span[a].dataset.player.toUpperCase() + ' Wins !!! <br><br>' + restartButton  
       var div = document.createElement("div");  
       div.className = "alert";  
       div.innerHTML = gameOverAlertElement;  
       document.getElementsByTagName("body")[0].appendChild(div);  
       window.isGameOver = true;  
       moves = 0;  
+      if(winner = "o"){
+          winO++;
+     document.getElementById("winO").innerHTML = "Wins: " + winO;
+      } else {
+          winX++;
+          document.getElementById("winX").innerHTML = "Wins: " + winX; 
+      }
  }  
+ let drawNum = 0;
  // checks if it is a draw and outputs a draw and a restart button
  function draw(){  
-      var drawAlertElement = '<b>DRAW!!!</b><br><br>' + restartButton;  
+      var drawAlertElement = '<strong>DRAW!!!</strong><br><br>' + restartButton;  
       var div = document.createElement("div");  
       div.className = "alert";  
       div.innerHTML = drawAlertElement;  
       document.getElementsByTagName("body")[0].appendChild(div);  
       window.isGameOver = true;  
       moves = 0;  
+      drawNum++;
+      document.getElementById("drawNum").innerHTML = "Draws: " + drawNum;
  }  
