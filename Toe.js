@@ -11,9 +11,11 @@ var playerTurn, moves, isGameOver, span, restartButton;
            y.dataset.player = playerTurn;  
            moves++;  
            if (playerTurn=="x") {  
-                playerTurn="o";  
+                playerTurn="o";
+                document.getElementById("player").innerHTML = "O";  
            } else if (playerTurn=="o") {  
                 playerTurn="x"  
+                document.getElementById("player").innerHTML = "X";  
            }  
       }  
       checkWinner(1,2,3);  
