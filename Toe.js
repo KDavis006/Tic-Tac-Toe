@@ -72,12 +72,13 @@ var playerTurn, moves, isGameOver, span, restartButton;
       document.getElementsByTagName("body")[0].appendChild(div);  
       window.isGameOver = true;  
       moves = 0;  
-      if(winner = "o"){
+      console.log(winner)
+      if(winner == "o"){
           winO++;
-     document.getElementById("winO").innerHTML = "Wins: " + winO;
+     document.getElementById("winO").innerHTML = "Wins for O: " + winO;
       } else {
           winX++;
-          document.getElementById("winX").innerHTML = "Wins: " + winX; 
+          document.getElementById("winX").innerHTML = "Wins for X: " + winX; 
       }
  }  
  let drawNum = 0;
